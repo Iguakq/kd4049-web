@@ -18,8 +18,9 @@ export default function Home() {
       </section>
 
       {/* Information */}
-      <section className="h-screen">
-        <p className="pt-12 pl-2 pr-12 text-2xl md:text-6xl">
+      <section>
+        <h2>Introduction</h2>
+        <p className="pt-52 pl-2 pr-16 text-2xl md:text-6xl">
           This is our kingdom, a place where players come together to grow,
           organize, and fight side by side. Here, every member matters, and
           progress is achieved through teamwork and mutual support. Our goal is
@@ -28,22 +29,24 @@ export default function Home() {
           individual power, but about building something solid together.
         </p>
 
-        <img src="kvk2.jpg" className="p-2 pt-12" />
-        <a href="/rankings" className="pt-12 pl-2 text-2xl underline">
-          Rankings
-        </a>
+        <div className="p-2 md:pt-52 flex flex-col md:flex-row items-stretch">
+          <img src="kvk2.jpg" className="md:w-200" />
+          <a href="/rankings" className="text-2xl underline">
+            Rankings
+          </a>
+        </div>
       </section>
 
       {/* Links */}
       <div className="bg-blue-700 h-100 ">
-        <h1>explora mas</h1>
+        <h1>Explore more</h1>
         <div className="flex flex-col pt-12 pl-4 pr-8">
           <ul>
             <li className="text-7xl text-white">Discord</li>
             <hr className="border-white" />
-            <li className="text-7xl text-white">inmigration</li>
+            <li className="text-7xl text-white">Inmigration</li>
             <hr className="border-white" />
-            <li className="text-7xl text-white">kvk</li>
+            <li className="text-7xl text-white">Kvk</li>
             <hr className="border-white" />
             <li className="text-7xl text-white">Rankings</li>
           </ul>

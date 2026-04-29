@@ -3,3 +3,17 @@
 .root {
     isolation: isolate;
 }
+
+@layer components {
+    .rule-section {
+        @apply text-3xl font-bold pt-4;
+    }
+
+    .rule-title {
+        @apply text-2xl pt-2;
+    }
+
+    .rule-description {
+        @apply pl-6;
+    }
+}

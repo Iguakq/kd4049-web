@@ -10,12 +10,12 @@ export default function Header() {
       {/* Menu */}
 
       <Drawer.Root>
-        <Drawer.Trigger>Abrir</Drawer.Trigger>
+        <Drawer.Trigger>Open Menu</Drawer.Trigger>
         <Drawer.Portal>
           <Drawer.Backdrop className="fixed inset-0 bg-black/45" />
           <Drawer.Viewport className="fixed inset-0 flex items-end">
             <Drawer.Popup className="h-full w-full rounded-t-2xl bg-white">
-              <Drawer.Content>nose</Drawer.Content>
+              <Drawer.Content>navigation links here</Drawer.Content>
             </Drawer.Popup>
           </Drawer.Viewport>
         </Drawer.Portal>

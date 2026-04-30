@@ -1,16 +1,24 @@
 @import "tailwindcss";
 
+/* Base */
 .root {
     isolation: isolate;
 }
 
+/* Theme */
+@theme {
+    --color-yellow: hsl(48, 100, 64);
+    --color-blue: hsl(244, 51, 52);
+}
+
+/* Components */
 @layer components {
     .rule-section {
-        @apply text-3xl font-bold pt-4;
+        @apply pt-4 text-3xl font-bold;
     }
 
     .rule-title {
-        @apply text-2xl pt-2;
+        @apply pt-2 text-2xl;
     }
 
     .rule-description {

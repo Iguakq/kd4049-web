@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Button } from "@base-ui/react/button";
 import Hero from "@/components/Hero";
 import Links from "@/components/Links";
 
@@ -14,15 +15,37 @@ export default function Home() {
       <Hero />
 
       {/* Information */}
-      <section className="h-screen bg-white">
-        <h1>text</h1>
+      <section className="h-screen md:h-fit bg-white">
+        <div className="m-4 p-2 w-fit h-fit rounded-4xl border border-black">
+          <h3 className="md:text-2xl">Introduction</h3>
+        </div>
+
+        <p className="pt-18 md:pt-36 pl-4 pr-16 text-2xl md:text-7xl">
+          This is our kingdom, a place where players come together to grow,
+          organize, and fight side by side. Here, every member matters, and
+          progress is achieved through teamwork and mutual support. Our goal is
+          to strengthen ourselves as a kingdom and an alliance, improve day by
+          day, and advance decisively on the battlefield. It’s not just about
+          individual power, but about building something solid together.
+        </p>
+
+        <div className="p-4 md:pt-48 flex flex-col md:flex-row gap-4">
+          <img src="kvk2.jpg" className="md:w-320" />
+          <a href="/rankings" className="text-2xl underline">
+            Rankings
+          </a>
+        </div>
       </section>
 
       <Links />
 
       {/* CTA */}
-      <section>
-        <h1>text</h1>
+      <section className="pt-12 flex flex-col items-center gap-4">
+        <h2 className="text-5xl">Want to join us?</h2>
+        <p className="text-2xl">Dont wait more</p>
+        <Button className="p-2 border rounded-3xl border-black">
+          Inmigration 🡥
+        </Button>
       </section>
     </main>
   );

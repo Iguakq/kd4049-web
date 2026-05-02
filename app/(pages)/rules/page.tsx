@@ -44,7 +44,7 @@ export default function Rules() {
             </h3>
             <p className="rule-description">
               Do not steal resource nodes from other alliances / do not attack
-              other players' gatherers within the kingdom.
+              other players gatherers within the kingdom.
             </p>
           </li>
 

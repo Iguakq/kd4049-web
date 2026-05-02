@@ -1,35 +1,136 @@
 "use client";
 
-import { Drawer } from "@base-ui/react/drawer";
-import { motion } from "motion/react";
+import { useState } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useMotionValueEvent,
+} from "motion/react";
+import { Drawer } from "@base-ui/react";
 
 export default function Header() {
-  return (
-    <header className="fixed flex flex-row justify-between w-full p-6 z-10">
-      {/* Logo */}
-      <a href="/">
-        <img src="logo.png" className="h-12" />
-      </a>
-      {/* Menu */}
+  // Hidden scroll
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
 
-      <Drawer.Root>
-        <Drawer.Trigger>Open Menu</Drawer.Trigger>
-        <Drawer.Portal>
-          <Drawer.Backdrop className="fixed inset-0 bg-black/45" />
-          <Drawer.Viewport className="fixed inset-0 flex items-end">
-            <motion.div
-              className="h-full w-full rounded-t-2xl bg-white"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-            >
-              <Drawer.Popup className="h-full w-full rounded-t-2xl bg-white">
-                <Drawer.Content>navigation links here</Drawer.Content>
-              </Drawer.Popup>
-            </motion.div>
-          </Drawer.Viewport>
-        </Drawer.Portal>
-      </Drawer.Root>
-    </header>
+  // Drawer animation
+  const [open, setOpen] = useState(false);
+  const [animating, setAnimating] = useState(false);
+
+  // Calculate scroll
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    setHidden(current > previous && current > 150);
+  });
+
+  // Handle drawer
+  const handleOpen = () => {
+    setOpen(true);
+    setAnimating(true);
+  };
+  const handleClose = () => {
+    setAnimating(false);
+    setTimeout(() => setOpen(false), 300);
+  };
+
+  return (
+    <motion.header
+      animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed z-10 w-full px-2"
+    >
+      {/* Header */}
+      <div className="flex justify-between p-2 md:p-4">
+        <a href="/">
+          <img src="logo.png" className="w-10" alt="Logo" />
+        </a>
+
+        {/* Menu */}
+        <Drawer.Root open={open} onOpenChange={() => {}}>
+          <Drawer.Trigger
+            onClick={handleOpen}
+            className="text-2xl text-yellow cursor-pointer"
+          >
+            + <strong>Menu</strong>
+          </Drawer.Trigger>
+          <Drawer.Portal>
+            <Drawer.Viewport className="fixed inset-0 z-20">
+              <AnimatePresence>
+                {animating && (
+                  <motion.div
+                    className="h-full w-full bg-blue"
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    exit={{ y: "100%" }}
+                    transition={{
+                      type: "tween",
+                      duration: 0.3,
+                      ease: "easeIn",
+                    }}
+                  >
+                    <Drawer.Popup>
+                      <Drawer.Content>
+                        <div className="flex flex-col pt-12">
+                          <ul>
+                            <motion.li
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2, delay: 0.1 }}
+                              viewport={{ once: true }}
+                              className="text-7xl text-yellow"
+                            >
+                              Discord
+                            </motion.li>
+                            <hr className="border-white" />
+                            <motion.li
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2, delay: 0.2 }}
+                              viewport={{ once: true }}
+                              className="text-7xl text-yellow"
+                            >
+                              Inmigration
+                            </motion.li>
+                            <hr className="border-white" />
+                            <motion.li
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2, delay: 0.3 }}
+                              viewport={{ once: true }}
+                              className="text-7xl text-yellow"
+                            >
+                              Kvk
+                            </motion.li>
+                            <hr className="border-white" />
+                            <motion.li
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2, delay: 0.4 }}
+                              viewport={{ once: true }}
+                              className="text-7xl text-yellow"
+                            >
+                              Rankings
+                            </motion.li>
+                          </ul>
+                        </div>
+
+                        <Drawer.Close
+                          onClick={handleClose}
+                          className="text-2xl cursor-pointer"
+                        >
+                          × <strong>Close</strong>
+                        </Drawer.Close>
+                      </Drawer.Content>
+                    </Drawer.Popup>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </Drawer.Viewport>
+          </Drawer.Portal>
+        </Drawer.Root>
+      </div>
+      <hr className="text-yellow" />
+    </motion.header>
   );
 }

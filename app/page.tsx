@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import { Button } from "@base-ui/react/button";
-import Hero from "@/components/Hero";
-import Links from "@/components/Links";
+import Hero from "./components/Hero";
+import Links from "./components/Links";
 
 export const metadata: Metadata = {
   description:

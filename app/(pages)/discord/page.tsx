@@ -1,62 +1,22 @@
 import type { Metadata } from "next";
 
+import DiscordHero from "./components/Hero";
+import DiscordIntroduction from "./components/Introduction";
+
 export const metadata: Metadata = {
   title: "Discord",
+  description:
+    "Join our Kingdom Discord to connect with the community, make new friends, and be part of the adventure!",
 };
 
 export default function Discord() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-24 flex flex-col items-center gap-12">
-        <h1 className="text-center text-7xl font-bold text-blue-700">
-          Join our
-          <br />
-          discord!
-        </h1>
-        <img src="discord.png" />
-      </section>
+      <DiscordHero />
 
       {/*  Introduction */}
-      <p className="pt-12 pl-2 pr-12 text-2xl text-blue-700">
-        Join our Discord and take your gaming experience to the next level.
-        Here, you can share strategies, learn from other players, and
-        participate in matches and events with an active community. If you enjoy
-        planning, competing, and improving, this is the place for you.
-      </p>
-
-      {/* Benefits */}
-      <section className="p-12 flex flex-col items-center gap-8">
-        <h1 className="text-blue-700 text-4xl text-center">
-          Here`s what you can
-          <br /> do once you join:
-        </h1>
-        <section className="flex flex-col md:flex-row gap-4">
-          {/* Connect */}
-          <div>
-            <h1 className="text-2xl font-bold text-blue-700">Connect</h1>
-            <p className="text-2xl text-blue-700">
-              Join other kingdom citicens
-            </p>
-          </div>
-          <hr className="border-t border-blue-700" />
-          {/* Guides */}
-          <div>
-            <h1 className="text-2xl font-bold text-blue-700">Guides</h1>
-            <p className="text-2xl text-blue-700">
-              Leran more with our guides, ascend to the top
-            </p>
-          </div>
-          <hr className="border-t border-blue-700" />
-          {/* Events */}
-          <div>
-            <h1 className="text-2xl font-bold text-blue-700">Events</h1>
-            <p className="text-2xl text-blue-700">
-              Participate in events and win
-            </p>
-          </div>
-        </section>
-      </section>
+      <DiscordIntroduction />
 
       {/* Link */}
       <section className="w-full h-55 flex flex-col items-center bg-blue-700">

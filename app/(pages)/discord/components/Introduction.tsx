@@ -1,9 +1,12 @@
 "use client";
 
+import TextBox from "@/components/TextBox";
+
 export default function DiscordIntroduction() {
   return (
-    <div>
-      <p className="pt-12 pl-2 pr-12 text-2xl text-blue-700">
+    <section className="md:h-fill">
+      <TextBox color="text-blue" text="Why join" />
+      <p className="pt-10 pl-2 pr-10 text-2xl text-blue font-bold">
         Join our Discord and take your gaming experience to the next level.
         Here, you can share strategies, learn from other players, and
         participate in matches and events with an active community. If you enjoy
@@ -42,6 +45,6 @@ export default function DiscordIntroduction() {
           </div>
         </section>
       </section>
-    </div>
+    </section>
   );
 }

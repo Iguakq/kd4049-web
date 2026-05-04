@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import { Drawer } from "@base-ui/react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   // Hidden scroll
@@ -17,6 +18,9 @@ export default function Header() {
   // Drawer animation
   const [open, setOpen] = useState(false);
   const [animating, setAnimating] = useState(false);
+
+  // Colors
+  const pathname = usePathname();
 
   // Calculate scroll
   useMotionValueEvent(scrollY, "change", (current) => {
@@ -34,6 +38,10 @@ export default function Header() {
     setTimeout(() => setOpen(false), 300);
   };
 
+  // Colors
+  const routeColor =
+    pathname === "/" ? "yellow" : pathname === "/discord" ? "blue" : "black";
+
   return (
     <motion.header
       animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
@@ -50,7 +58,7 @@ export default function Header() {
         <Drawer.Root open={open} onOpenChange={() => {}}>
           <Drawer.Trigger
             onClick={handleOpen}
-            className="text-2xl text-yellow cursor-pointer"
+            className={`text-2xl text-${routeColor} cursor-pointer`}
           >
             + <strong>Menu</strong>
           </Drawer.Trigger>
@@ -71,7 +79,17 @@ export default function Header() {
                   >
                     <Drawer.Popup>
                       <Drawer.Content>
-                        <div className="flex flex-col pt-12">
+                        <div className="flex flex-row justify-between">
+                          <h1>KD49</h1>
+
+                          <Drawer.Close
+                            onClick={handleClose}
+                            className="text-2xl cursor-pointer"
+                          >
+                            × <strong>Close</strong>
+                          </Drawer.Close>
+                        </div>
+                        <div className="flex flex-col pt-12 bottom-0">
                           <ul>
                             <motion.li
                               initial={{ opacity: 0, y: 30 }}
@@ -114,13 +132,6 @@ export default function Header() {
                             </motion.li>
                           </ul>
                         </div>
-
-                        <Drawer.Close
-                          onClick={handleClose}
-                          className="text-2xl cursor-pointer"
-                        >
-                          × <strong>Close</strong>
-                        </Drawer.Close>
                       </Drawer.Content>
                     </Drawer.Popup>
                   </motion.div>
@@ -130,7 +141,7 @@ export default function Header() {
           </Drawer.Portal>
         </Drawer.Root>
       </div>
-      <hr className="text-yellow" />
+      <hr className={`text-${routeColor}`} />
     </motion.header>
   );
 }

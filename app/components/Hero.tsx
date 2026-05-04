@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen bg-blue">
       <Image
         src="/hero.jpg"
         alt="Hero image"

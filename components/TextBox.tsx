@@ -1,6 +1,8 @@
-export default function TextBox({ color, text }) {
+export default function TextBox({ color, text, withMargin }) {
   return (
-    <div className={`w-fit h-fit m-2 mt-3 p-1 rounded-4xl border ${color}`}>
+    <div
+      className={`${withMargin ? "m-2 mt-3" : ""} px-2 w-fit h-fit border rounded-4xl ${color}`}
+    >
       <h3 className="md:text-2xl">{text}</h3>
     </div>
   );

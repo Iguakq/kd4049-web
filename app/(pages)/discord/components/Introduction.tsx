@@ -4,9 +4,9 @@ import TextBox from "@/components/TextBox";
 
 export default function DiscordIntroduction() {
   return (
-    <section className="md:h-fill">
-      <TextBox color="text-blue" text="Why join" />
-      <p className="pt-10 pl-2 pr-10 text-2xl text-blue font-bold">
+    <section>
+      <TextBox color="text-blue" text="Why join" withMargin={true} />
+      <p className="pt-18 md:pt-36 pl-4 pr-16 text-2xl md:text-7xl font-bold text-blue">
         Join our Discord and take your gaming experience to the next level.
         Here, you can share strategies, learn from other players, and
         participate in matches and events with an active community. If you enjoy

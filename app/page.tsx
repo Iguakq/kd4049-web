@@ -21,7 +21,7 @@ export default function Home() {
           organize, and fight side by side. Here, every member matters, and
           progress is achieved through teamwork and mutual support. Our goal is
           to strengthen ourselves as a kingdom and an alliance, improve day by
-          day, and advance decisively on the battlefield. It's not just about
+          day, and advance decisively on the battlefield. It´s not just about
           individual power, but about building something solid together.
         </p>
         <div className="flex flex-col gap-4 p-4 md:flex-row md:pt-40">

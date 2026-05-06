@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import {
   AnimatePresence,
   motion,
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import { Drawer } from "@base-ui/react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { Drawer } from "@base-ui/react";
+import Link from "next/link";
 
 export default function Header() {
   // Hidden scroll
@@ -48,17 +50,16 @@ export default function Header() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed z-10 w-full px-2"
     >
-      {/* Header */}
       <div className="flex justify-between p-2 md:p-4">
         <a href="/">
-          <img src="logo.png" className="w-10" alt="Logo" />
+          <Image src="/logo.png" alt="Logo" width={40} height={40} />
         </a>
 
         {/* Menu */}
         <Drawer.Root open={open} onOpenChange={() => {}}>
           <Drawer.Trigger
             onClick={handleOpen}
-            className={`text-2xl text-${routeColor} cursor-pointer`}
+            className={`cursor-pointer text-2xl text-${routeColor}`}
           >
             + <strong>Menu</strong>
           </Drawer.Trigger>
@@ -77,60 +78,111 @@ export default function Header() {
                       ease: "easeIn",
                     }}
                   >
-                    <Drawer.Popup>
-                      <Drawer.Content>
-                        <div className="flex flex-row justify-between">
-                          <h1>KD49</h1>
+                    <Drawer.Popup className="h-full">
+                      <Drawer.Content className="flex h-full flex-col">
+                        {/* Navigation */}
+                        <div className="flex flex-row justify-between p-5">
+                          <Link
+                            onClick={handleClose}
+                            href="/"
+                            className="text-2xl text-yellow"
+                          >
+                            KD49
+                          </Link>
 
                           <Drawer.Close
                             onClick={handleClose}
-                            className="text-2xl cursor-pointer"
+                            className="cursor-pointer text-2xl text-yellow"
                           >
                             × <strong>Close</strong>
                           </Drawer.Close>
                         </div>
-                        <div className="flex flex-col pt-12 bottom-0">
-                          <ul>
-                            <motion.li
-                              initial={{ opacity: 0, y: 30 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.2, delay: 0.1 }}
-                              viewport={{ once: true }}
-                              className="text-7xl text-yellow"
+
+                        {/* Links */}
+                        <div className="flex flex-1 flex-col justify-end p-4">
+                          {/* Discord */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2, delay: 0.1 }}
+                            viewport={{ once: true }}
+                          >
+                            <Link
+                              href="/discord"
+                              onClick={handleClose}
+                              className="text-7xl font-bold text-yellow md:text-[8vw]"
                             >
                               Discord
-                            </motion.li>
-                            <hr className="border-white" />
-                            <motion.li
-                              initial={{ opacity: 0, y: 30 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.2, delay: 0.2 }}
-                              viewport={{ once: true }}
-                              className="text-7xl text-yellow"
+                            </Link>
+                          </motion.div>
+                          <hr className="border-white" />
+
+                          {/* Immigration */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2, delay: 0.2 }}
+                            viewport={{ once: true }}
+                          >
+                            <Link
+                              href="/immigration"
+                              onClick={handleClose}
+                              className="text-7xl font-bold text-yellow md:text-[8vw]"
                             >
-                              Inmigration
-                            </motion.li>
-                            <hr className="border-white" />
-                            <motion.li
-                              initial={{ opacity: 0, y: 30 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.2, delay: 0.3 }}
-                              viewport={{ once: true }}
-                              className="text-7xl text-yellow"
+                              Immigration
+                            </Link>
+                          </motion.div>
+                          <hr className="border-white" />
+
+                          {/* Kvk */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2, delay: 0.3 }}
+                            viewport={{ once: true }}
+                          >
+                            <Link
+                              href="/kvk"
+                              onClick={handleClose}
+                              className="text-7xl font-bold text-yellow md:text-[8vw]"
                             >
                               Kvk
-                            </motion.li>
-                            <hr className="border-white" />
-                            <motion.li
-                              initial={{ opacity: 0, y: 30 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.2, delay: 0.4 }}
-                              viewport={{ once: true }}
-                              className="text-7xl text-yellow"
+                            </Link>
+                          </motion.div>
+                          <hr className="border-white" />
+
+                          {/* Rankings */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2, delay: 0.4 }}
+                            viewport={{ once: true }}
+                          >
+                            <Link
+                              href="/rankings"
+                              onClick={handleClose}
+                              className="text-7xl font-bold text-yellow md:text-[8vw]"
                             >
                               Rankings
-                            </motion.li>
-                          </ul>
+                            </Link>
+                          </motion.div>
+                          <hr className="border-white" />
+
+                          {/* Rules */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2, delay: 0.5 }}
+                            viewport={{ once: true }}
+                          >
+                            <Link
+                              href="/rules"
+                              onClick={handleClose}
+                              className="text-7xl font-bold text-yellow md:text-[8vw]"
+                            >
+                              Rules
+                            </Link>
+                          </motion.div>
                         </div>
                       </Drawer.Content>
                     </Drawer.Popup>

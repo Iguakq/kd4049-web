@@ -65,7 +65,7 @@ export default function Home() {
 
           <p className="text-2xl md:text-7xl">Don&apos;t wait any longer</p>
 
-          <Link href="/inmigration" className="text-3xl underline">
+          <Link href="/immigration" className="text-3xl underline">
             Immigration 🡥
           </Link>
         </div>

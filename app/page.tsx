@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Rankings */}
       <section className="flex flex-col gap-4 p-4 pt-0 md:pt-40 2xl:flex-row">
-        <img src="/map.png" alt="Kingdom map" className="2xl:w-300" />
+        <img src="/map.webp" alt="Kingdom map" className="2xl:w-300" />
 
         <div className="hidden w-1 bg-black 2xl:block" />
 

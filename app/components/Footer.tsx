@@ -1,18 +1,42 @@
 export default function Footer() {
   return (
-    <footer className="pt-12">
-      <ul className="pl-12">
-        <li className="font-bold">Links</li>
-        <li> Community Discord</li>
-        <li>Inmigration Discord</li>
-        <li>Inmigration form</li>
-        <li>Github repo</li>
-      </ul>
-      <div className="pt-12 pb-2 flex flex-col items-center">
-        <p className="">
-          Made with 🩷 by <a href="https://github.com/Iguakq">Iguaka</a>
-        </p>
+    <footer className="flex flex-col items-center gap-4 p-10">
+      <div className="flex justify-between gap-10 md:gap-40">
+        <ul>
+          <li className="text-2xl font-bold">Links</li>
+          <li>
+            <a href="https://discord.gg/4mbS7rMw" className="md:text-2xl">
+              Community Discord
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/tXJRBQqmy6" className="md:text-2xl">
+              Inmigration Discord
+            </a>
+          </li>
+          <li>
+            <a className="md:text-2xl">Inmigration form</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Iguakq/kd4049-web"
+              className="md:text-2xl"
+            >
+              Github Repo
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li className="text-2xl font-bold">Contact</li>
+          <li className="md:text-2xl">hello@kd4049.com</li>
+        </ul>
       </div>
+      <p>
+        Made with 🩷 by{" "}
+        <a href="https://github.com/Iguakq" className="underline">
+          Iguaka
+        </a>
+      </p>
     </footer>
   );
 }

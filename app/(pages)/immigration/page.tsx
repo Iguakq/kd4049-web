@@ -1,10 +1,10 @@
-import InmigrationHero from "./components/Hero";
+import ImmigrationHero from "./components/Hero";
 import TextBox from "@/components/TextBox";
 
 export default function Inmigration() {
   return (
     <main>
-      <InmigrationHero />
+      <ImmigrationHero />
 
       {/* Information */}
       <section>

@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-export default function InmigrationHero() {
+export default function ImmigrationHero() {
   return (
     <section className="flex flex-col items-center gap-10 pt-20 px-4 md:gap-20 md:pt-40">
       <motion.h1

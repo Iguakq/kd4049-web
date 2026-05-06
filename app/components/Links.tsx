@@ -1,15 +1,14 @@
 "use client";
 
-import { motion } from "motion/react";
 import TextBox from "@/components/TextBox";
+import { motion } from "motion/react";
 import Link from "next/link";
 
 export default function Links() {
   return (
-    <section className="flex flex-col p-4 bg-blue gap-4">
+    <section className="flex flex-col gap-4 bg-blue p-4">
       <TextBox color="text-yellow" text="Explore more" />
-
-      <p className="md:text-2xl text-white">
+      <p className="text-white md:text-2xl">
         From here, you can explore the different areas of the kingdom, meet its
         inhabitants, and discover everything it has to offer.
       </p>
@@ -23,14 +22,14 @@ export default function Links() {
       >
         <Link
           href="/discord"
-          className="text-7xl text-yellow md:text-[10vw] font-bold"
+          className="text-7xl font-bold text-yellow md:text-[10vw]"
         >
           Discord
         </Link>
       </motion.div>
       <hr className="border-white" />
 
-      {/* Inmigration */}
+      {/* Immigration */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,10 +37,10 @@ export default function Links() {
         viewport={{ once: true }}
       >
         <Link
-          href="/inmigration"
-          className="text-7xl text-yellow md:text-[10vw] font-bold"
+          href="/immigration"
+          className="text-7xl font-bold text-yellow md:text-[10vw]"
         >
-          Inmigration
+          Immigration
         </Link>
       </motion.div>
       <hr className="border-white" />
@@ -55,7 +54,7 @@ export default function Links() {
       >
         <Link
           href="/kvk"
-          className="text-7xl text-yellow md:text-[10vw] font-bold"
+          className="text-7xl font-bold text-yellow md:text-[10vw]"
         >
           Kvk
         </Link>
@@ -71,7 +70,7 @@ export default function Links() {
       >
         <Link
           href="/rules"
-          className="text-7xl text-yellow md:text-[10vw] font-bold"
+          className="text-7xl font-bold text-yellow md:text-[10vw]"
         >
           Rules
         </Link>

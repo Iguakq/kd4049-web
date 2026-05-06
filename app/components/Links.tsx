@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Links() {
   return (
     <section className="flex flex-col p-4 bg-blue gap-4">
-      <TextBox color="text-yellow" text="Explore more" withMargin={false} />
+      <TextBox color="text-yellow" text="Explore more" />
 
       <p className="md:text-2xl text-white">
         From here, you can explore the different areas of the kingdom, meet its

@@ -8,7 +8,7 @@ export default function Inmigration() {
 
       {/* Information */}
       <section>
-        <TextBox color="text-black" text="Join us" withMargin={true} />
+        <TextBox color="text-black" text="Join us" />
         <h1 className="pt-20 text-3xl text-center">How to join</h1>
 
         <div className="pt-10 flex flex-row gap-4">

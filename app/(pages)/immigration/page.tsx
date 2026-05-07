@@ -18,7 +18,7 @@ export default function Inmigration() {
       <section className="p-4">
         <TextBox color="text-black" text="Join us" />
 
-        <div className="flex flex-col items-center gap-4 py-20 md:gap-10 md:flex-col">
+        <div className="flex flex-col items-center gap-4 py-20 md:py-40 md:gap-10 md:flex-col">
           <h2 className="text-3xl text-center md:text-8xl">How to join</h2>
 
           <p className="text-center md:text-4xl">

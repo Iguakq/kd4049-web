@@ -32,6 +32,7 @@ KD4049 is a community platform designed to unify internal organization and impro
 | [Motion](https://motion.dev) | 12 |
 | [Base UI](https://base-ui.com) | 1 |
 | [Vercel Analytics](https://vercel.com/analytics) | 2 |
+| [Vercel Speed-insights](https://vercel.com/analytics) | 2 |
 
 ---
 

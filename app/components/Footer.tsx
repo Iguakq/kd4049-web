@@ -15,9 +15,6 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a className="md:text-2xl">Inmigration form</a>
-          </li>
-          <li>
             <a
               href="https://github.com/Iguakq/kd4049-web"
               className="md:text-2xl"

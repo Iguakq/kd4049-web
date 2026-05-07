@@ -1,32 +1,40 @@
+import { Metadata } from "next";
+
+import RankingsHero from "./components/Hero";
+
+export const metadata: Metadata = {
+  title: "Rankings",
+  description: "Check Kingdom rankings, top alliances and players",
+};
+
 export default function Rankings() {
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-24 flex flex-col items-center gap-12">
-        <h1 className="text-center text-7xl font-bold text-amber-300">
-          Kingdom rankings
-        </h1>
-      </section>
+    <main>
+      <RankingsHero />
 
       {/* Alliances */}
-      <section className="mt-12 h-50 bg-blue-700 flex flex-col items-center">
-        <h1 className="text-white">Most powerfull alliances</h1>
+      <section className="py-10 md:py-20 flex flex-col items-center bg-blue text-yellow">
+        <h2 className="text-3xl md:text-6xl font-bold pb-4">
+          Most powerfull alliances
+        </h2>
         <ol className="list-decimal">
-          <li>[#VAL] #VALHALLA - 1.8B</li>
-          <li>[#VV] VALHALLA VANGUARD - 1.2B</li>
-          <li>[RR-] ROYAL REBORN - 1B</li>
+          <li className=" md:text-4xl">[#VAL] #VALHALLA - 2.2B</li>
+          <li className=" md:text-4xl">[#VV] VALHALLA VANGUARD - 1.3B</li>
+          <li className=" md:text-4xl">[RR-] ROYAL REBORN - 1.1B</li>
         </ol>
       </section>
 
       {/* Players */}
-      <section className="pt-12">
-        <h1 className="text-amber-300">Most powerfull players</h1>
+      <section className="py-10 md:py-20 flex flex-col items-center text-black">
+        <h2 className="text-3xl md:text-6xl font-bold pb-4">
+          Most powerfull players
+        </h2>
         <ol className="list-decimal">
-          <li>[#VAL] #VALHALLA - 1.8B</li>
-          <li>[#VV] VALHALLA VANGUARD - 1.2B</li>
-          <li>[RR-] ROYAL REBORN - 1B</li>
+          <li className=" md:text-4xl">HerMan - 100M</li>
+          <li className=" md:text-4xl">WARHAMMER - 60M</li>
+          <li className=" md:text-4xl">Glady - 45M</li>
         </ol>
       </section>
-    </>
+    </main>
   );
 }

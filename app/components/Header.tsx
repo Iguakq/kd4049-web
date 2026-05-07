@@ -42,7 +42,13 @@ export default function Header() {
 
   // Colors
   const routeColor =
-    pathname === "/" ? "yellow" : pathname === "/discord" ? "blue" : "black";
+    pathname === "/"
+      ? "yellow"
+      : pathname === "/discord"
+        ? "blue"
+        : pathname === "/kvk"
+          ? "yellow"
+          : "black";
 
   return (
     <motion.header

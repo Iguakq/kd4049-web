@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏰 KD4049 — Kingdom Website
 
-## Getting Started
+Official website of **Kingdom 4049**, built to centralize all kingdom information and make it accessible to every member and future recruit.
 
-First, run the development server:
+🌐 **Live:** [kd4049.com](https://kd4049.com)
+
+---
+
+## 📖 About
+
+KD4049 is a community platform designed to unify internal organization and improve communication across the kingdom. It provides a single, up-to-date reference point covering community info, immigration guides, the event calendar, and more — making it easier to onboard new players and keep existing members informed.
+
+---
+
+## ✨ Features
+
+- **Community** — Information about the kingdom and its members
+- **Immigration** — Guide for players looking to join KD4049
+- **Calendar** — Upcoming events, KvK dates, and kingdom activities
+- **Simple & accessible** — Clean UI built for quick navigation
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Version |
+|---|---|
+| [Next.js](https://nextjs.org) | 16 |
+| [React](https://react.dev) | 19 |
+| TypeScript | 5 |
+| [Tailwind CSS](https://tailwindcss.com) | 4 |
+| [Motion](https://motion.dev) | 12 |
+| [Base UI](https://base-ui.com) | 1 |
+| [Vercel Analytics](https://vercel.com/analytics) | 2 |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- [pnpm](https://pnpm.io/) (recommended)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/Iguakq/kd4049-web.git
+cd kd4049-web
+
+# Install dependencies
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Lint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm lint
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+kd4049-web/
+├── app/              # Next.js App Router (pages & layouts)
+├── components/       # Reusable UI components
+├── public/           # Static assets
+├── next.config.ts
+├── tailwind.config   # Tailwind CSS config
+└── tsconfig.json
+```
+
+---
+
+## 🌍 Deployment
+
+The project is deployed on **Vercel**. Every push to `main` triggers an automatic deployment.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Iguakq/kd4049-web)
+
+---
+
+## 📜 License
+
+This project is licensed under the [GPL-3.0 License](./LICENSE).
+
+---
+
+> Built with ❤️ for Kingdom 4049

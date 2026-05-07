@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+
 import ImmigrationHero from "./components/Hero";
 import TextBox from "@/components/TextBox";
+
+export const metadata: Metadata = {
+  title: "Immgration",
+  description:
+    "Join our kingdom, connect with the community, make new allies, and embark on a new in-game adventure",
+};
 
 export default function Inmigration() {
   return (
@@ -7,28 +15,25 @@ export default function Inmigration() {
       <ImmigrationHero />
 
       {/* Information */}
-      <section>
+      <section className="p-4">
         <TextBox color="text-black" text="Join us" />
-        <h1 className="pt-20 text-3xl text-center">How to join</h1>
 
-        <div className="pt-10 flex flex-row gap-4">
-          <div className="text-center">
-            <h1 className="text-2xl">Join migration discord</h1>
-            <a href="https://discord.gg/4mbS7rMw">Discord</a>
-          </div>
+        <div className="flex flex-col items-center gap-4 py-20 md:gap-10 md:flex-col">
+          <h2 className="text-3xl text-center md:text-8xl">How to join</h2>
 
-          <div className="h-28 w-px bg-black"></div>
+          <p className="text-center md:text-4xl">
+            You&apos;re welcome to join if you have less than 10M power.
+            <br />
+            If you have more, DM SJ (221306415) or join this migration Discord
+          </p>
 
-          <div className="text-center">
-            <h1 className="text-2xl">Complete this form</h1>
-            <a href="https://discord.gg/4mbS7rMw">Form</a>
-          </div>
+          <a
+            href="https://discord.gg/4mbS7rMw"
+            className="text-2xl underline md:text-4xl"
+          >
+            Discord 🡥
+          </a>
         </div>
-      </section>
-
-      {/* Collage 2 */}
-      <section className="pt-12">
-        <img src="kvk2.jpg" />
       </section>
     </main>
   );

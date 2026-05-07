@@ -21,7 +21,7 @@ export default function ImmigrationHero() {
         win together, and we always support each other to go further.
       </p>
 
-      <img src="map.webp" />
+      <img src="lt.webp" />
     </section>
   );
 }

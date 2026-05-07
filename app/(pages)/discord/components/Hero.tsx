@@ -9,7 +9,7 @@ export default function DiscordHero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-7xl font-bold text-blue md:text-[10vw]"
+        className="text-center text-7xl font-bold text-blue md:text-[12vw]"
       >
         Join our
         <br />
@@ -18,7 +18,7 @@ export default function DiscordHero() {
 
       <div className="relative w-full overflow-hidden md:px-40">
         <img
-          src="discord.png"
+          src="discord.webp"
           alt="Discord"
           className="w-full h-full object-cover"
         />

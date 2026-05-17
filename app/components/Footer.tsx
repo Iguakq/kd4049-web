@@ -5,7 +5,7 @@ export default function Footer() {
         <ul>
           <li className="text-2xl font-bold">Links</li>
           <li>
-            <a href="https://discord.gg/4mbS7rMw" className="md:text-2xl">
+            <a href="https://discord.gg/wc23bTbuMb" className="md:text-2xl">
               Community Discord
             </a>
           </li>
